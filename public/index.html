@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KSCRAPER</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark justify-content-center">
+  <a class="navbar-brand" href="#">KSCRAPER</a>
+</nav>
+<br>
+<div class="container-fluid">
+  <div class="row justify-content-sm-center">
+    <div class="col-5">
+      <div class="form-group">
+        <label >Start ID</label>
+        <input type="text" class="form-control" id="start" placeholder="12345">
+        <small class="form-text text-muted">Start ID for the search</small>
+      </div>
+      <div class="form-group">
+        <label >Stop ID</label>
+        <input type="text" class="form-control" id="stop" placeholder="12345">
+        <small class="form-text text-muted">Stop ID for the search</small>
+      </div>
+    </div>
+    <div class="col-2">
+      <center><button class="btn btn-outline-dark" id="go" type="button" style='margin:40% 0 10%; width:100%'>GO!</button></center>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-sm-center">
+    <div class="col-10">
+      <table class="table table-bordered table-dark table-sm" style='margin-bottom:10%'>
+        <thead>
+          <tr>
+            <th scope="col"><center>ID</center></th>
+            <th scope="col"><center>MODEL NAME</center></th>
+            <th scope="col"><center>LINK</center></th>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
